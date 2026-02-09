@@ -317,15 +317,15 @@
     class="fixed w-full top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
     <div class="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <img src="Logo.png" alt="EDUKARTE" class="h-14 md:h-20 object-contain" />
+        <img src="Logo.png" alt="EDUKARTE" class="h-14 lg:h-20 object-contain" />
         <div class="flex flex-col">
-          <span class="font-bold text-sm md:text-xl tracking-tight leading-none dark:text-white block">EDUK<span
+          <span class="font-bold text-sm lg:text-xl tracking-tight leading-none dark:text-white block">EDUK<span
               class="text-primary">ARTE</span></span>
         </div>
       </div>
 
       <!-- Nav Desktop -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600 dark:text-slate-300">
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600 dark:text-slate-300">
         <a class="hover:text-primary transition-colors" href="#nosotros">Nosotros</a>
         <a class="hover:text-primary transition-colors" href="#cursos">Cursos</a>
         <a class="hover:text-primary transition-colors" href="#testimonios">Testimonios</a>
@@ -333,7 +333,7 @@
       </nav>
 
       <!-- Botón Ingreso Desktop -->
-      <div class="hidden md:flex items-center gap-4">
+      <div class="hidden lg:flex items-center gap-4">
         <a class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all transform hover:scale-105"
           href="#">
           ¡INGRESAR A LA PLATAFORMA!
@@ -342,42 +342,53 @@
 
       <!-- Botón Menú Móvil -->
       <button id="mobile-menu-btn"
-        class="md:hidden text-slate-700 dark:text-slate-200 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+        class="lg:hidden text-slate-700 dark:text-slate-200 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
         <span class="material-symbols-outlined text-3xl">menu</span>
       </button>
     </div>
 
-    <!-- Menú Móvil Overlay -->
-    <div id="mobile-menu"
-      class="fixed inset-0 z-[100] bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center gap-8 md:hidden">
-      <button id="close-menu-btn"
-        class="absolute top-6 right-6 text-slate-700 dark:text-slate-200 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-        <span class="material-symbols-outlined text-4xl">close</span>
-      </button>
 
-      <nav class="flex flex-col items-center gap-8 text-2xl font-bold text-slate-700 dark:text-slate-200">
-        <a class="hover:text-primary transition-colors mobile-link" href="#nosotros">Nosotros</a>
-        <a class="hover:text-primary transition-colors mobile-link" href="#cursos">Cursos</a>
-        <a class="hover:text-primary transition-colors mobile-link" href="#testimonios">Testimonios</a>
-        <a class="hover:text-primary transition-colors mobile-link" href="#faq">Preguntas</a>
-      </nav>
-
-      <a class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-bold text-lg shadow-lg transition-transform active:scale-95 mt-4"
-        href="#">
-        ¡INGRESAR A LA PLATAFORMA!
-      </a>
-    </div>
   </header>
+
+  <!-- Menú Móvil Overlay -->
+  <div id="mobile-menu"
+    class="fixed top-0 left-0 right-0 z-[100] h-auto bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg transform -translate-y-full transition-transform duration-300 flex flex-col items-center justify-start pt-20 pb-10 gap-6 lg:hidden shadow-2xl rounded-b-3xl border-b border-white/20">
+    <button id="close-menu-btn"
+      class="absolute top-5 right-6 text-slate-700 dark:text-slate-200 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+      <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+
+    <nav class="flex flex-col items-center gap-5 text-xl font-bold text-slate-700 dark:text-slate-200 w-full mt-4">
+      <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+        href="#nosotros">Nosotros</a>
+      <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+        href="#cursos">Cursos</a>
+      <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+        href="#testimonios">Testimonios</a>
+      <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+        href="#faq">Preguntas</a>
+    </nav>
+
+    <a class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-bold text-base shadow-lg transition-transform active:scale-95 mb-2"
+      href="#">
+      ¡INGRESAR A LA PLATAFORMA!
+    </a>
+  </div>
   <main>
     <section class="relative h-screen flex items-center overflow-hidden">
       <!-- Fondo -->
       <div class="absolute inset-0 z-0">
-        <video autoplay muted loop playsinline class="w-full h-full object-cover object-center"
-          poster="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070">
-          <source src="video1.mp4" type="video/mp4">
-          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070"
+        <video autoplay muted loop playsinline preload="metadata" class="w-full h-full object-cover object-center"
+          poster="https://res.cloudinary.com/dlqvg6tut/image/upload/f_webp,q_auto/VideoFondo_poster.jpg">
+          <!-- WebM ligero -->
+          <source src="https://res.cloudinary.com/dlqvg6tut/video/upload/f_webm,q_auto,ar_16:9/VideoFondo_q2epih.webm"
+            type="video/webm">
+          <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/f_webp,q_auto/VideoFondo_poster.jpg"
             alt="Estudiantes aprendiendo" class="w-full h-full object-cover object-center">
         </video>
+
+
+
 
         <!-- Overlays -->
         <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
@@ -2652,10 +2663,10 @@
 
     <!-- Sección CTA Final -->
     <section class="relative bg-gradient-to-r from-[#1a0b2e] via-[#4a157d] to-primary min-h-[600px] section-animate">
-      <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+      <div class="grid grid-cols-1 min-[1026px]:grid-cols-2 min-h-[600px]">
         <!-- IZQUIERDA (contenido centrado y limitado) -->
         <div class="flex items-center px-6 animate-item delay-1">
-          <div class="max-w-xl ml-auto text-white py-20">
+          <div class="max-w-xl text-white py-20 mx-auto text-center min-[1026px]:ml-auto min-[1026px]:text-left">
             <h2 class="text-4xl md:text-5xl font-bold mb-6">
               ¿Qué Esperas? ¡Matricúlate Ahora!
             </h2>
@@ -2671,7 +2682,7 @@
         </div>
 
         <!-- DERECHA (IMAGEN FULL HEIGHT + FULL WIDTH) -->
-        <div class="relative animate-item delay-2">
+        <div class="relative animate-item delay-2 hidden min-[1026px]:block">
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJKfgezvV7dscEfdgQU879ySvnGcnT4IkVt1T1LW1Wj6aqpliqUPqPox2XsruiH87KI0VaLV0BGPT5bHfewvVRGauYYZ7cFXDCpaHRfJqNgfYNMLW34gUY0BGAwdxA0Ea9CSeySw95RC_gFMBtcc2pjbfUBUF-Tx0Mmm3TGAqD18sMTWWsjKdcKdfXiI13brlLoicHUa2wCso-J0RRnTLRJYbxh0VJrDqqtKaK0ecnpqpoYtr-EYnsttRz3YOKpGPxkloczPrvjaE"
             alt="Estudiante usando laptop en casa" class="absolute inset-0 w-full h-full object-cover" />
@@ -3255,12 +3266,12 @@
 
     if (mobileMenuBtn && mobileMenu && closeMenuBtn) {
       mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.remove('-translate-y-full');
         document.body.style.overflow = 'hidden'; // Prevenir scroll de fondo
       });
 
       function closeMenu() {
-        mobileMenu.classList.add('translate-x-full');
+        mobileMenu.classList.add('-translate-y-full');
         document.body.style.overflow = ''; // Restaurar scroll
       }
 

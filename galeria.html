@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html class="scroll-smooth overflow-x-hidden" lang="es">
+
+<head>
+    <!-- ========== META BÁSICOS ========== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- ========== SEO PRINCIPAL ========== -->
+    <title>Galería de Momentos - EDUKARTE | Fotos de Clases de Inglés, Karate y Ajedrez</title>
+    <meta name="description"
+        content="Descubre nuestra galería de momentos especiales en EDUKARTE. Fotos de clases de inglés, karate, ajedrez y baile para niños. Mira cómo aprenden y se divierten nuestros estudiantes.">
+    <meta name="keywords"
+        content="galería EDUKARTE, fotos clases niños, galería inglés infantil, fotos karate niños, imágenes ajedrez, galería actividades educativas, momentos EDUKARTE, fotos estudiantes, galería cursos Perú">
+    <meta name="author" content="EDUKARTE">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://edukarte.com/galeria.html">
+
+    <!-- ========== OPEN GRAPH (Facebook, WhatsApp, LinkedIn) ========== -->
+    <meta property="og:locale" content="es_PE">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Galería de Momentos - EDUKARTE | Fotos de Nuestras Clases">
+    <meta property="og:description"
+        content="Mira los mejores momentos de aprendizaje y diversión en EDUKARTE. Galería de fotos de clases de inglés, karate, ajedrez y baile para niños.">
+    <meta property="og:url" content="https://edukarte.com/galeria.html">
+    <meta property="og:site_name" content="EDUKARTE">
+    <meta property="og:image" content="https://edukarte.com/images/galeria-og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"
+        content="Galería de momentos EDUKARTE - Estudiantes en clases de inglés, karate y ajedrez">
+
+    <!-- ========== TWITTER CARDS ========== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Galería de Momentos - EDUKARTE | Fotos de Nuestras Clases">
+    <meta name="twitter:description"
+        content="Descubre los mejores momentos de aprendizaje en EDUKARTE. Galería de fotos de clases para niños.">
+    <meta name="twitter:image" content="https://edukarte.com/images/galeria-twitter-card.jpg">
+    <meta name="twitter:image:alt" content="Galería EDUKARTE">
+
+    <!-- ========== FAVICON ========== -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- ========== PRECONNECT & DNS-PREFETCH (Rendimiento) ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://res.cloudinary.com">
+
+    <!-- ========== FONTS ========== -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+        rel="stylesheet">
+
+    <!-- ========== SCHEMA MARKUP JSON-LD (ImageGallery) ========== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Galería de Momentos EDUKARTE",
+      "description": "Galería fotográfica de las actividades educativas y recreativas de EDUKARTE: clases de inglés, karate, ajedrez y baile para niños.",
+      "url": "https://edukarte.com/galeria.html",
+      "publisher": {
+        "@type": "EducationalOrganization",
+        "name": "EDUKARTE",
+        "url": "https://edukarte.com",
+        "logo": "https://res.cloudinary.com/dlqvg6tut/image/upload/v1770688083/Logo_jdjhai.webp"
+      },
+      "about": {
+        "@type": "EducationalOrganization",
+        "name": "EDUKARTE",
+        "description": "Instituto infantil en Perú que ofrece clases de inglés, karate, ajedrez y baile para niños"
+      }
+    }
+    </script>
+
+    <!-- ========== THEME COLOR (Para navegadores móviles) ========== -->
+    <meta name="theme-color" content="#ec4899">
+    <meta name="msapplication-TileColor" content="#ec4899">
+
+    <!-- ========== ESTILOS CSS ========== -->
+    <link href="./dist/output.css" rel="stylesheet">
+    <style>
+        /* ANIMACIONES DE SCROLL HACIA ARRIBA */
+        .section-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .section-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Animación para elementos dentro de las secciones */
+        .animate-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .section-animate.visible .animate-item,
+        .animate-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-item.delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .animate-item.delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .animate-item.delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        /* Animación de carga para las imágenes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        /* Estilo activo para los filtros */
+        .filter-btn.active {
+            background-image: linear-gradient(to right, var(--color-primary, #9333ea), #c026d3);
+            border-color: transparent;
+            color: white;
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+        }
+
+        .dark .filter-btn.active {
+            box-shadow: 0 4px 15px rgba(192, 132, 252, 0.3);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300 overflow-x-hidden w-full pt-20">
+    <header
+        class="fixed w-full top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1770688083/Logo_jdjhai.webp"
+                        alt="EDUKARTE" class="h-14 lg:h-20 object-contain" />
+                    <div class="flex flex-col">
+                        <span class="font-bold text-sm lg:text-xl tracking-tight leading-none dark:text-white block">
+                            EDUK<span class="text-primary">ARTE</span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Nav Desktop -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600 dark:text-slate-300">
+                <a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
+                <a class="hover:text-primary transition-colors text-primary font-bold" href="galeria.html">Galería</a>
+                <a class="hover:text-primary transition-colors" href="index.html#cursos">Cursos</a>
+                <a class="hover:text-primary transition-colors" href="index.html#contactanos">Contáctanos</a>
+            </nav>
+
+            <!-- Botón Ingreso Desktop -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all transform hover:scale-105"
+                    href="https://wa.me/51933796733?text=Hola%20EDUKARTE%2C%20me%20interesan%20sus%20cursos"
+                    target="_blank" rel="noopener noreferrer">
+                    ¡CONTÁCTANOS!
+                </a>
+            </div>
+
+            <!-- Botón Menú Móvil -->
+            <button id="mobile-menu-btn"
+                class="lg:hidden text-slate-700 dark:text-slate-200 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menú Móvil Overlay -->
+    <div id="mobile-menu"
+        class="fixed top-0 left-0 right-0 z-[100] h-auto bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg transform -translate-y-full transition-transform duration-300 flex flex-col items-center justify-start pt-20 pb-10 gap-6 lg:hidden shadow-2xl rounded-b-3xl border-b border-white/20">
+        <button id="close-menu-btn"
+            class="absolute top-5 right-6 text-slate-700 dark:text-slate-200 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+
+        <nav class="flex flex-col items-center gap-5 text-xl font-bold text-slate-700 dark:text-slate-200 w-full mt-4">
+            <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+                href="index.html">Inicio</a>
+            <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 text-primary"
+                href="galeria.html">Galería</a>
+            <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+                href="index.html#cursos">Cursos</a>
+            <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+                href="index.html#contactanos">Contáctanos</a>
+        </nav>
+
+        <a class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-bold text-base shadow-lg transition-transform active:scale-95 mb-2"
+            href="https://wa.me/51933796733?text=Hola%20EDUKARTE%2C%20me%20interesan%20sus%20cursos" target="_blank"
+            rel="noopener noreferrer">
+            ¡CONTÁCTANOS!
+        </a>
+    </div>
+
+    <main>
+        <!-- Galería de Fotos Mejorada -->
+        <section
+            class="py-10 bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900 min-h-screen"
+            id="galeria">
+            <div class="container mx-auto px-4 md:px-6">
+                <!-- Encabezado mejorado (se mantiene igual) -->
+                <div class="text-center mb-12 relative pt-8">
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl">
+                        <div class="h-40 w-40 bg-primary/5 dark:bg-purple-500/10 rounded-full blur-3xl mx-auto"></div>
+                    </div>
+
+                    <div class="relative">
+                        <h2
+                            class="text-5xl md:text-6xl font-bold text-primary dark:text-purple-300 mb-6 animate-item visible">
+                            Galería de <span class="text-brand-purple dark:text-purple-400">Momentos</span>
+                        </h2>
+                        <div
+                            class="w-40 h-1.5 bg-gradient-to-r from-primary to-brand-purple mx-auto mb-6 rounded-full shadow-lg animate-item visible delay-1">
+                        </div>
+
+                        <p
+                            class="text-lg md:text-xl text-slate-700 dark:text-slate-300 font-medium max-w-full md:whitespace-nowrap mx-auto mb-8 leading-relaxed animate-item visible delay-1">
+                            Capturando los mejores momentos de aprendizaje y diversión en nuestras actividades
+                        </p>
+
+                        <div class="flex flex-wrap justify-center gap-4 mb-6" id="gallery-filters">
+                            <button
+                                class="filter-btn active px-5 py-2.5 bg-gradient-to-r from-primary to-brand-purple text-white font-medium rounded-full transition-all duration-300 hover:shadow-lg shadow-md animate-item visible delay-2"
+                                data-filter="all">
+                                Todas
+                            </button>
+                            <button
+                                class="filter-btn px-5 py-2.5 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium rounded-full border border-slate-200 dark:border-slate-700 transition-all duration-300 hover:border-primary hover:dark:border-purple-500 animate-item visible delay-2"
+                                data-filter="ingles">
+                                Inglés
+                            </button>
+                            <button
+                                class="filter-btn px-5 py-2.5 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium rounded-full border border-slate-200 dark:border-slate-700 transition-all duration-300 hover:border-primary hover:dark:border-purple-500 animate-item visible delay-2"
+                                data-filter="karate">
+                                Karate
+                            </button>
+                            <button
+                                class="filter-btn px-5 py-2.5 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium rounded-full border border-slate-200 dark:border-slate-700 transition-all duration-300 hover:border-primary hover:dark:border-purple-500 animate-item visible delay-2"
+                                data-filter="ajedrez">
+                                Ajedrez
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estilos CSS para el efecto Masonry -->
+                <style>
+                    .masonry-grid {
+                        column-count: 1;
+                        column-gap: 1rem;
+                    }
+
+                    @media (min-width: 640px) {
+                        .masonry-grid {
+                            column-count: 2;
+                        }
+                    }
+
+                    @media (min-width: 768px) {
+                        .masonry-grid {
+                            column-count: 3;
+                        }
+                    }
+
+                    @media (min-width: 1024px) {
+                        .masonry-grid {
+                            column-count: 4;
+                        }
+                    }
+
+                    .masonry-item {
+                        break-inside: avoid;
+                        margin-bottom: 1rem;
+                        display: inline-block;
+                        width: 100%;
+                        transition: all 0.3s ease;
+                    }
+
+                    .filter-btn.active {
+                        background: linear-gradient(to right, var(--primary-color, #3b82f6), var(--brand-purple, #a855f7));
+                        color: white;
+                    }
+
+                    /* Efecto de fade para filtros */
+                    .gallery-filtering .masonry-item {
+                        opacity: 0.5;
+                        transform: scale(0.95);
+                    }
+
+                    .gallery-filtering .masonry-item[data-category].visible {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                </style>
+
+                <!-- Grid de Galería con estilo Pinterest (Masonry) -->
+                <div id="gallery-container" class="masonry-grid pb-8">
+
+                    <!-- Ajedrez 1 -->
+                    <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-1_fukr8w.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-1_fukr8w.jpg"
+                                    alt="Clase de ajedrez - Niños aprendiendo estrategia" loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-blue-500/80 text-white text-xs font-bold rounded-full">Ajedrez</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Inglés 1 -->
+                    <div class="masonry-item animate-item visible delay-2" data-category="ingles">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230398/Ingles-ninos-1_q5thf8.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230398/Ingles-ninos-1_q5thf8.jpg" alt="Clase de inglés - Aprendizaje interactivo"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-green-500/80 text-white text-xs font-bold rounded-full">Inglés</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Karate 1 -->
+                    <div class="masonry-item animate-item visible delay-3" data-category="karate">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-1_j9120d.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-1_j9120d.jpg"
+                                    alt="Clase de karate - Entrenamiento disciplinado" loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-orange-500/80 text-white text-xs font-bold rounded-full">Karate</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Ajedrez 2 -->
+                    <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-2_xq1jqi.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-2_xq1jqi.jpg" alt="Clase de ajedrez - Concentración y táctica"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-blue-500/80 text-white text-xs font-bold rounded-full">Ajedrez</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Inglés 2 -->
+                    <div class="masonry-item animate-item visible delay-2" data-category="ingles">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Ingles-ninos-2_dph2id.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Ingles-ninos-2_dph2id.jpg" alt="Clase de inglés - Diversión y aprendizaje"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-green-500/80 text-white text-xs font-bold rounded-full">Inglés</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Karate 2 -->
+                    <div class="masonry-item animate-item visible delay-3" data-category="karate">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-2_asvcdg.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-2_asvcdg.jpg" alt="Clase de karate - Práctica de técnicas"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-orange-500/80 text-white text-xs font-bold rounded-full">Karate</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Ajedrez 3 -->
+                    <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-3_pg9coa.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-3_pg9coa.jpg" alt="Clase de ajedrez - Desarrollo mental"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-blue-500/80 text-white text-xs font-bold rounded-full">Ajedrez</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Inglés 3 -->
+                    <div class="masonry-item animate-item visible delay-2" data-category="ingles">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Ingles-ninos-3_oigiti.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Ingles-ninos-3_oigiti.jpg" alt="Clase de inglés - Actividades dinámicas"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-green-500/80 text-white text-xs font-bold rounded-full">Inglés</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Karate 3 -->
+                    <div class="masonry-item animate-item visible delay-3" data-category="karate">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-3_li1vn4.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-3_li1vn4.jpg" alt="Clase de karate - Fortaleza y disciplina"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-orange-500/80 text-white text-xs font-bold rounded-full">Karate</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Ajedrez 4 -->
+                    <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-4_zfn63s.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-4_zfn63s.jpg" alt="Clase de ajedrez - Pensamiento estratégico"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-blue-500/80 text-white text-xs font-bold rounded-full">Ajedrez</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Inglés 4 -->
+                    <div class="masonry-item animate-item visible delay-2" data-category="ingles">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Ingles-ninos-4_qo0o60.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Ingles-ninos-4_qo0o60.jpg" alt="Clase de inglés - Conversación práctica"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-green-500/80 text-white text-xs font-bold rounded-full">Inglés</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Karate 4 -->
+                    <div class="masonry-item animate-item visible delay-3" data-category="karate">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-4_hjzdee.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-4_hjzdee.jpg" alt="Clase de karate - Movimientos precisos"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-orange-500/80 text-white text-xs font-bold rounded-full">Karate</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Ajedrez 5 -->
+                    <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-5_sh90kk.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-5_sh90kk.jpg" alt="Clase de ajedrez - Jugadas maestras"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-blue-500/80 text-white text-xs font-bold rounded-full">Ajedrez</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Inglés 5 -->
+                    <div class="masonry-item animate-item visible delay-2" data-category="ingles">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-5_sh90kk.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-5_sh90kk.jpg" alt="Clase de inglés - Vocabulario nuevo"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-green-500/80 text-white text-xs font-bold rounded-full">Inglés</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Karate 5 -->
+                    <div class="masonry-item animate-item visible delay-3" data-category="karate">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Karate-ninos-5_ht8qm1.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Karate-ninos-5_ht8qm1.jpg" alt="Clase de karate - Defensa personal"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-orange-500/80 text-white text-xs font-bold rounded-full">Karate</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Ajedrez 6 -->
+                    <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230391/Ajedrez-ninos-6_wwdhaq.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230391/Ajedrez-ninos-6_wwdhaq.jpg" alt="Clase de ajedrez - Análisis de partidas"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-blue-500/80 text-white text-xs font-bold rounded-full">Ajedrez</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Inglés 6 -->
+                    <div class="masonry-item animate-item visible delay-2" data-category="ingles">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ingles-ninos-6_h5520y.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ingles-ninos-6_h5520y.jpg" alt="Clase de inglés - Juegos educativos"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-green-500/80 text-white text-xs font-bold rounded-full">Inglés</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Karate 6 -->
+                    <div class="masonry-item animate-item visible delay-3" data-category="karate">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Karate-ninos-6_vap7kx.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Karate-ninos-6_vap7kx.jpg" alt="Clase de karate - Katas tradicionales"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-orange-500/80 text-white text-xs font-bold rounded-full">Karate</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Ajedrez 7 -->
+                    <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230391/Ajedrez-ninos-7_lkqz7q.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230391/Ajedrez-ninos-7_lkqz7q.jpg" alt="Clase de ajedrez - Torneos escolares"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-blue-500/80 text-white text-xs font-bold rounded-full">Ajedrez</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Inglés 7 -->
+                    <div class="masonry-item animate-item visible delay-2" data-category="ingles">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ingles-ninos-7_njknza.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ingles-ninos-7_njknza.jpg" alt="Clase de inglés - Pronunciación perfecta"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-green-500/80 text-white text-xs font-bold rounded-full">Inglés</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Karate 7 -->
+                    <div class="masonry-item animate-item visible delay-3" data-category="karate">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Karate-ninos-7_nnv2pz.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Karate-ninos-7_nnv2pz.jpg" alt="Clase de karate - Respeto y honor"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-orange-500/80 text-white text-xs font-bold rounded-full">Karate</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Ajedrez 8 -->
+                    <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230391/Ajedrez-ninos-8_dcb3ze.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230391/Ajedrez-ninos-8_dcb3ze.jpg" alt="Clase de ajedrez - Aperturas clásicas"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-blue-500/80 text-white text-xs font-bold rounded-full">Ajedrez</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Inglés 8 -->
+                    <div class="masonry-item animate-item visible delay-2" data-category="ingles">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230389/Ingles-ninos-8_fzhk0c.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230389/Ingles-ninos-8_fzhk0c.jpg" alt="Clase de inglés - Lectura comprensiva"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-green-500/80 text-white text-xs font-bold rounded-full">Inglés</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Ajedrez 9 -->
+                    <div class="masonry-item animate-item visible delay-3" data-category="ajedrez">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-9_omxmak.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-9_omxmak.jpg" alt="Clase de ajedrez - Finales de partida"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-blue-500/80 text-white text-xs font-bold rounded-full">Ajedrez</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Inglés 9 -->
+                    <div class="masonry-item animate-item visible delay-1" data-category="ingles">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230389/Ingles-ninos-9_ttyqmh.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230389/Ingles-ninos-9_ttyqmh.jpg" alt="Clase de inglés - Expresión oral"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-green-500/80 text-white text-xs font-bold rounded-full">Inglés</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Ajedrez 10 -->
+                    <div class="masonry-item animate-item visible delay-2" data-category="ajedrez">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-10_r5tnzo.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-10_r5tnzo.jpg" alt="Clase de ajedrez - Combinaciones tácticas"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-blue-500/80 text-white text-xs font-bold rounded-full">Ajedrez</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Ajedrez 11 -->
+                    <div class="masonry-item animate-item visible delay-3" data-category="ajedrez">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-11_evqfjb.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-11_evqfjb.jpg" alt="Clase de ajedrez - Práctica intensiva"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-blue-500/80 text-white text-xs font-bold rounded-full">Ajedrez</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Ajedrez 12 -->
+                    <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-12_fcift7.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-12_fcift7.jpg" alt="Clase de ajedrez - Competencia amistosa"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-blue-500/80 text-white text-xs font-bold rounded-full">Ajedrez</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Ajedrez 13 -->
+                    <div class="masonry-item animate-item visible delay-2" data-category="ajedrez">
+                        <button type="button" data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-13_vgfk3c.jpg"
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            <div class="relative">
+                                <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-13_vgfk3c.jpg" alt="Clase de ajedrez - Maestría y dedicación"
+                                    loading="lazy"
+                                    class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.03]">
+                                <div class="absolute top-4 left-4 z-10">
+                                    <span
+                                        class="px-3 py-1.5 bg-blue-500/80 text-white text-xs font-bold rounded-full">Ajedrez</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/35 via-black/0">
+                                </div>
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                    <span
+                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver imagen</span>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Script para el filtrado de categorías -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                const galleryItems = document.querySelectorAll('.masonry-item');
+                const galleryContainer = document.getElementById('gallery-container');
+
+                // Función para filtrar elementos
+                function filterGallery(category) {
+                    // Actualizar botones activos
+                    filterButtons.forEach(btn => {
+                        if (btn.dataset.filter === category) {
+                            btn.classList.add('active');
+                            // Resetear estilos inline que puedan interferir
+                            btn.style.background = '';
+                            btn.style.color = '';
+                        } else {
+                            btn.classList.remove('active');
+                            // Restaurar estilos por defecto
+                            btn.style.background = '';
+                            btn.style.color = '';
+                        }
+                    });
+
+                    // Aplicar filtro con animación suave
+                    galleryContainer.classList.add('gallery-filtering');
+
+                    setTimeout(() => {
+                        galleryItems.forEach(item => {
+                            if (category === 'all' || item.dataset.category === category) {
+                                item.style.display = 'inline-block';
+                                setTimeout(() => {
+                                    item.classList.add('visible');
+                                }, 50);
+                            } else {
+                                item.classList.remove('visible');
+                                setTimeout(() => {
+                                    item.style.display = 'none';
+                                }, 300);
+                            }
+                        });
+
+                        setTimeout(() => {
+                            galleryContainer.classList.remove('gallery-filtering');
+                        }, 400);
+                    }, 50);
+                }
+
+                // Agregar event listeners a los botones
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        const category = this.dataset.filter;
+                        filterGallery(category);
+                    });
+                });
+
+                // Inicializar con todas las imágenes visibles
+                filterGallery('all');
+
+
+                // Script para el modal de visualización de imágenes
+                const modal = document.getElementById('photoModal');
+                const modalImage = document.getElementById('modalImage');
+                const closeModalBtn = document.getElementById('closeModal');
+
+                document.querySelectorAll('[data-img]').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const imgSrc = this.dataset.img;
+                        const imgAlt = this.querySelector('img').alt;
+
+                        // Abrir modal con la imagen
+                        modalImage.src = imgSrc;
+                        modalImage.alt = imgAlt;
+                        modal.classList.remove('hidden');
+                        modal.classList.add('flex');
+                        document.body.style.overflow = 'hidden'; // Prevenir scroll
+                    });
+                });
+
+                // Cerrar modal al hacer click en el botón de cerrar
+                closeModalBtn.addEventListener('click', function () {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    document.body.style.overflow = ''; // Restaurar scroll
+                });
+
+                // Cerrar modal al hacer click fuera de la imagen
+                modal.addEventListener('click', function (e) {
+                    if (e.target === modal) {
+                        modal.classList.add('hidden');
+                        modal.classList.remove('flex');
+                        document.body.style.overflow = ''; // Restaurar scroll
+                    }
+                });
+
+                // Cerrar modal con la tecla ESC
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                        modal.classList.add('hidden');
+                        modal.classList.remove('flex');
+                        document.body.style.overflow = ''; // Restaurar scroll
+                    }
+                });
+            });
+        </script>
+
+        <!-- Estilos adicionales para los botones de filtro activos -->
+        <style>
+            .filter-btn.active {
+                background: linear-gradient(to right, #3b82f6, #a855f7) !important;
+                color: white !important;
+                border-color: transparent !important;
+            }
+
+            .dark .filter-btn.active {
+                background: linear-gradient(to right, #3b82f6, #a855f7) !important;
+            }
+
+            /* Transiciones suaves para el filtrado */
+            .masonry-item {
+                transition: opacity 0.3s ease, transform 0.3s ease, display 0.3s ease allow-discrete;
+            }
+
+            .masonry-item:not(.visible) {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            .gallery-filtering .masonry-item.visible {
+                opacity: 1;
+                transform: scale(1);
+            }
+        </style>
+
+
+
+
+
+        <!-- Modal para vista ampliada -->
+        <div id="photoModal"
+            class="fixed inset-0 z-50 hidden items-center justify-center bg-black/95 p-4 backdrop-blur-sm">
+            <div class="relative max-w-5xl w-full max-h-[90vh] overflow-hidden rounded-2xl bg-transparent">
+                <button id="closeModal"
+                    class="absolute top-4 right-4 z-50 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-white transition-all transform hover:rotate-90 text-2xl font-bold">
+                    ✕
+                </button>
+                <div class="flex items-center justify-center h-full">
+                    <img id="modalImage" src="" alt="Vista ampliada"
+                        class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl" />
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Botón de WhatsApp Flotante -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/51933796733?text=Hola%20EDUKARTE%2C%20me%20interesan%20sus%20cursos" target="_blank"
+            rel="noopener noreferrer"
+            class="w-14 h-14 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110 active:scale-95 animate-bounce"
+            aria-label="Contactar por WhatsApp">
+            <!-- Icono oficial de WhatsApp -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7 fill-current">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.511-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411" />
+            </svg>
+        </a>
+    </div>
+
+    <footer class="bg-gray-900 text-white pt-16 pb-8 relative overflow-hidden">
+        <!-- Elementos decorativos de fondo -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-purple-500 to-brand-purple">
+        </div>
+        <div
+            class="absolute -top-24 -left-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none opacity-50">
+        </div>
+        <div
+            class="absolute -bottom-24 -right-24 w-64 h-64 bg-brand-purple/10 rounded-full blur-3xl pointer-events-none opacity-50">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Columna 1: Branding -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-4xl text-primary">school</span>
+                        <div>
+                            <h3
+                                class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+                                EDU<span class="text-primary">KARTE</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        Empoderando estudiantes a través de una educación de calidad. Aprende, crece y alcanza tus metas
+                        con
+                        nuestros
+                        programas especializados.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/englishworldwidelurin" target="_blank"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@english_worldwide?is_from_webapp=1&sender_device=pc"
+                            target="_blank"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all duration-300 group">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/51933796733" target="_blank"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-500 hover:text-white transition-all duration-300 group">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.511-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces Rápidos -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6 relative inline-block">
+                        Enlaces Rápidos
+                        <span class="absolute -bottom-2 left-0 w-12 h-1 bg-primary rounded-full"></span>
+                    </h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li>
+                            <a href="index.html"
+                                class="hover:text-primary transition-colors flex items-center gap-2 group">
+                                <span
+                                    class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#cursos"
+                                class="hover:text-primary transition-colors flex items-center gap-2 group">
+                                <span
+                                    class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>Nuestros
+                                Cursos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#nosotros"
+                                class="hover:text-primary transition-colors flex items-center gap-2 group">
+                                <span
+                                    class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>Sobre
+                                Nosotros
+                            </a>
+                        </li>
+                        <li>
+                            <a href="galeria.html"
+                                class="hover:text-primary transition-colors flex items-center gap-2 group">
+                                <span
+                                    class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>Galería
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#testimonios"
+                                class="hover:text-primary transition-colors flex items-center gap-2 group">
+                                <span
+                                    class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>Testimonios
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Cursos -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6 relative inline-block">
+                        Programas
+                        <span class="absolute -bottom-2 left-0 w-12 h-1 bg-brand-purple rounded-full"></span>
+                    </h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li>
+                            <a href="index.html#cursos"
+                                class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
+                                <span
+                                    class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>Inglés
+                                Kids
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#cursos"
+                                class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
+                                <span
+                                    class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>Inglés
+                                Juniors
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#cursos"
+                                class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
+                                <span
+                                    class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>Inglés
+                                Adultos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#cursos"
+                                class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
+                                <span
+                                    class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>Karate
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#cursos"
+                                class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
+                                <span
+                                    class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>Ajedrez
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Contacto -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6 relative inline-block">
+                        Contacto
+                        <span class="absolute -bottom-2 left-0 w-12 h-1 bg-primary rounded-full"></span>
+                    </h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-4 group">
+                            <div
+                                class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                                <span class="material-symbols-outlined text-sm text-primary">location_on</span>
+                            </div>
+                            <span class="leading-tight">Av. Las Virreynas Mz A Lt 6, Lurín, Lima</span>
+                        </li>
+                        <li class="flex items-start gap-4 group">
+                            <div
+                                class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center shrink-0 group-hover:bg-green-500/20 transition-colors">
+                                <span class="material-symbols-outlined text-sm text-green-500">phone</span>
+                            </div>
+                            <div>
+                                <a href="tel:+51933796733" class="hover:text-white transition-colors block">+51 933 796
+                                    733</a>
+                                <span class="text-xs text-gray-500">Lunes a Sábado</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 group">
+                            <div
+                                class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center shrink-0 group-hover:bg-brand-purple/20 transition-colors">
+                                <span class="material-symbols-outlined text-sm text-brand-purple">mail</span>
+                            </div>
+                            <a href="mailto:info.englishworldwide@gmail.com"
+                                class="hover:text-white transition-colors break-all">info.englishworldwide@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Barra Inferior -->
+            <div class="border-t border-gray-800 pt-8 mt-4 flex justify-center items-center">
+                <p class="text-gray-500 text-sm text-center">
+                    © <span id="year">2026</span> English WorldWide. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let currentCategory = 'all';
+
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const items = Array.from(document.querySelectorAll('.gallery-item'));
+
+            // Modal logic
+            const modal = document.getElementById('photoModal');
+            const modalImg = document.getElementById('modalImage');
+            const closeModal = document.getElementById('closeModal');
+
+            items.forEach(item => {
+                item.addEventListener('click', function () {
+                    const imgSrc = this.querySelector('img').src;
+                    modalImg.src = imgSrc;
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                });
+            });
+
+            if (closeModal) {
+                closeModal.addEventListener('click', () => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                });
+            }
+
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.classList.add('hidden');
+                        modal.classList.remove('flex');
+                    }
+                });
+            }
+
+            // Función para filtrar items
+            function filterItems() {
+                items.forEach(item => {
+                    if (currentCategory === 'all' || item.getAttribute('data-category') === currentCategory) {
+                        item.style.display = 'block';
+                        // Reinicia animación
+                        item.classList.remove('animate-fade-in');
+                        void item.offsetWidth; // trigger reflow
+                        item.classList.add('animate-fade-in');
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+            // Event Listeners para Filtros
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Actualizar UI botones
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-gradient-to-r', 'from-primary', 'to-brand-purple', 'text-white', 'shadow-lg');
+                        b.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-700');
+                    });
+
+                    this.classList.add('active', 'bg-gradient-to-r', 'from-primary', 'to-brand-purple', 'text-white', 'shadow-lg');
+                    this.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-700');
+
+                    currentCategory = this.getAttribute('data-filter');
+                    filterItems();
+                });
+            });
+
+            // Renderizado inicial
+            filterItems();
+
+            // Mobile Menu Logic
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                const isHidden = mobileMenu.classList.contains('-translate-y-full');
+                if (isHidden) {
+                    mobileMenu.classList.remove('-translate-y-full');
+                } else {
+                    mobileMenu.classList.add('-translate-y-full');
+                }
+            }
+
+            if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMenu);
+            if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+
+
+
+
+            // Update copyright year
+            const year = new Date().getFullYear();
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) yearSpan.textContent = year;
+        });
+    </script>
+</body>
+
+</html>

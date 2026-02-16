@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #9d1292;
+  --color-brand-purple: #4c1d95;
+  --color-background-light: #f3e8f8;
+  --color-background-dark: #1a0b2e;
+  --font-display: "Arial", serif;
+  --font-sans: "Inter", sans-serif;
+  --radius: 0.75rem;
+  --radius-xl: 1.5rem;
+}

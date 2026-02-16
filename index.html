@@ -47,11 +47,18 @@
   <!-- ========== PRECONNECT & DNS-PREFETCH (Rendimiento) ========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
   <link rel="dns-prefetch" href="https://res.cloudinary.com">
 
-  <!-- Preload LCP image (first carousel image) -->
+  <!-- Preload LCP image (first carousel image) with high priority -->
   <link rel="preload" as="image"
-    href="https://res.cloudinary.com/dlqvg6tut/image/upload/v1770688079/HeroIngles_fqr4qz.webp" fetchpriority="high">
+    href="https://res.cloudinary.com/dlqvg6tut/image/upload/v1770688079/HeroIngles_fqr4qz.webp" fetchpriority="high"
+    imagesrcset="https://res.cloudinary.com/dlqvg6tut/image/upload/v1770688079/HeroIngles_fqr4qz.webp"
+    imagesizes="560px">
+
+  <!-- Preload video poster (background) -->
+  <link rel="preload" as="image"
+    href="https://res.cloudinary.com/dlqvg6tut/image/upload/f_webp,q_auto/VideoFondo_poster.jpg">
 
   <!-- ========== FONTS (Optimized for performance) ========== -->
   <link
@@ -154,10 +161,10 @@
   <meta name="theme-color" content="#ec4899">
   <meta name="msapplication-TileColor" content="#ec4899">
 
-  <!-- ========== ESTILOS CSS (Optimized) ========== -->
-  <!-- Preload critical CSS -->
+  <!-- ========== ESTILOS CSS (Optimized for faster FCP/LCP) ========== -->
+  <!-- Load CSS normally for faster FCP - preload ensures it's prioritized -->
   <link rel="preload" href="./dist/output.css" as="style">
-  <link href="./dist/output.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+  <link href="./dist/output.css" rel="stylesheet">
   <noscript>
     <link href="./dist/output.css" rel="stylesheet">
   </noscript>
@@ -586,7 +593,7 @@
     <section class="relative h-screen flex items-center overflow-hidden">
       <!-- Fondo -->
       <div class="absolute inset-0 z-0">
-        <video autoplay muted loop playsinline preload="metadata" class="w-full h-full object-cover object-center"
+        <video autoplay muted loop playsinline preload="none" class="w-full h-full object-cover object-center"
           poster="https://res.cloudinary.com/dlqvg6tut/image/upload/f_webp,q_auto/VideoFondo_poster.jpg">
           <!-- WebM ligero -->
           <source src="https://res.cloudinary.com/dlqvg6tut/video/upload/f_webm,q_auto,ar_16:9/VideoFondo_q2epih.webm"

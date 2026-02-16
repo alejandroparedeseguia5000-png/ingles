@@ -48,10 +48,8 @@
     <!-- ========== PRECONNECT & DNS-PREFETCH (Rendimiento) ========== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
     <link rel="dns-prefetch" href="https://res.cloudinary.com">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Fonts optimized for performance -->
     <link
@@ -90,10 +88,10 @@
     <meta name="theme-color" content="#ec4899">
     <meta name="msapplication-TileColor" content="#ec4899">
 
-    <!-- ========== ESTILOS CSS (Optimized) ========== -->
-    <!-- Preload critical CSS -->
+    <!-- ========== ESTILOS CSS (Optimized for faster FCP/LCP) ========== -->
+    <!-- Load CSS normally for faster FCP - preload ensures it's prioritized -->
     <link rel="preload" href="./dist/output.css" as="style">
-    <link href="./dist/output.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+    <link href="./dist/output.css" rel="stylesheet">
     <noscript>
         <link href="./dist/output.css" rel="stylesheet">
     </noscript>

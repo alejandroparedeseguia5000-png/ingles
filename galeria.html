@@ -98,6 +98,39 @@
         <link href="./dist/output.css" rel="stylesheet">
     </noscript>
 
+    <!-- Critical CSS to prevent FOUC and CLS -->
+    <style>
+        /* Prevent FOUC (Flash of Unstyled Content) */
+        html {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        html.wf-active,
+        html.fonts-loaded {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s ease-in;
+        }
+
+        /* Fallback: show content after 100ms even if fonts don't load */
+        @keyframes fadeIn {
+            to {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        html {
+            animation: fadeIn 0.001s ease-in 0.1s forwards;
+        }
+
+        /* Prevent layout shift while fonts load */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+    </style>
+
     <style>
         /* ANIMACIONES DE SCROLL HACIA ARRIBA */
         .section-animate {
@@ -165,6 +198,19 @@
             box-shadow: 0 4px 15px rgba(192, 132, 252, 0.3);
         }
     </style>
+
+    <!-- Script to mark when CSS is loaded -->
+    <script>
+        // Mark HTML as ready when CSS loads
+        document.addEventListener('DOMContentLoaded', function () {
+            document.documentElement.classList.add('fonts-loaded');
+        });
+
+        // Fallback: ensure content shows even if DOMContentLoaded doesn't fire
+        window.addEventListener('load', function () {
+            document.documentElement.classList.add('fonts-loaded');
+        });
+    </script>
 </head>
 
 <body

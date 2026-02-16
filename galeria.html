@@ -53,13 +53,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!-- Fonts optimized for performance -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&display=swap"
+        rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
     <noscript>
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0&display=swap"
             rel="stylesheet">
     </noscript>
 
@@ -89,8 +90,10 @@
     <meta name="theme-color" content="#ec4899">
     <meta name="msapplication-TileColor" content="#ec4899">
 
-    <!-- ========== ESTILOS CSS ========== -->
-    <link href="./dist/output.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <!-- ========== ESTILOS CSS (Optimized) ========== -->
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="./dist/output.css" as="style">
+    <link href="./dist/output.css" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
     <noscript>
         <link href="./dist/output.css" rel="stylesheet">
     </noscript>

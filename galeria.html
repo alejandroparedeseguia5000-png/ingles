@@ -191,10 +191,6 @@
             color: white;
             box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
         }
-
-        .dark .filter-btn.active {
-            box-shadow: 0 4px 15px rgba(192, 132, 252, 0.3);
-        }
     </style>
 
     <!-- Script to mark when CSS is loaded -->
@@ -211,17 +207,15 @@
     </script>
 </head>
 
-<body
-    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300 overflow-x-hidden w-full pt-20">
-    <header
-        class="fixed w-full top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<body class="bg-background-light text-slate-800 transition-colors duration-300 overflow-x-hidden w-full pt-20">
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <a href="index.html" class="flex items-center gap-2">
                     <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1770688083/Logo_jdjhai.webp"
                         alt="EDUKARTE" class="h-14 lg:h-20 object-contain" />
                     <div class="flex flex-col">
-                        <span class="font-bold text-sm lg:text-xl tracking-tight leading-none dark:text-white block">
+                        <span class="font-bold text-sm lg:text-xl tracking-tight leading-none block">
                             EDUK<span class="text-primary">ARTE</span>
                         </span>
                     </div>
@@ -229,7 +223,7 @@
             </div>
 
             <!-- Nav Desktop -->
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600 dark:text-slate-300">
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-600">
                 <a class="hover:text-primary transition-colors" href="index.html">Inicio</a>
                 <a class="hover:text-primary transition-colors text-primary font-bold" href="galeria.html">Galería</a>
                 <a class="hover:text-primary transition-colors" href="index.html#cursos">Cursos</a>
@@ -246,7 +240,7 @@
 
             <!-- Botón Menú Móvil -->
             <button id="mobile-menu-btn"
-                class="lg:hidden text-slate-700 dark:text-slate-200 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                class="lg:hidden text-slate-700 p-2 rounded-lg hover:bg-slate-100:bg-slate-800 transition-colors">
                 <span class="material-symbols-outlined text-3xl">menu</span>
             </button>
         </div>
@@ -254,20 +248,20 @@
 
     <!-- Menú Móvil Overlay -->
     <div id="mobile-menu"
-        class="fixed top-0 left-0 right-0 z-[100] h-auto bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg transform -translate-y-full transition-transform duration-300 flex flex-col items-center justify-start pt-20 pb-10 gap-6 lg:hidden shadow-2xl rounded-b-3xl border-b border-white/20">
+        class="fixed top-0 left-0 right-0 z-[100] h-auto bg-white/95 backdrop-blur-lg transform -translate-y-full transition-transform duration-300 flex flex-col items-center justify-start pt-20 pb-10 gap-6 lg:hidden shadow-2xl rounded-b-3xl border-b border-white/20">
         <button id="close-menu-btn"
-            class="absolute top-5 right-6 text-slate-700 dark:text-slate-200 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            class="absolute top-5 right-6 text-slate-700 p-2 rounded-full hover:bg-slate-100:bg-slate-800 transition-colors">
             <span class="material-symbols-outlined text-4xl">close</span>
         </button>
 
-        <nav class="flex flex-col items-center gap-5 text-xl font-bold text-slate-700 dark:text-slate-200 w-full mt-4">
-            <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+        <nav class="flex flex-col items-center gap-5 text-xl font-bold text-slate-700 w-full mt-4">
+            <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50:bg-slate-800/50"
                 href="index.html">Inicio</a>
-            <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50 dark:hover:bg-slate-800/50 text-primary"
+            <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50:bg-slate-800/50 text-primary"
                 href="galeria.html">Galería</a>
-            <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+            <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50:bg-slate-800/50"
                 href="index.html#cursos">Cursos</a>
-            <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+            <a class="hover:text-primary transition-colors mobile-link w-full text-center py-2 hover:bg-slate-50:bg-slate-800/50"
                 href="index.html#contactanos">Contáctanos</a>
         </nav>
 
@@ -280,27 +274,24 @@
 
     <main>
         <!-- Galería de Fotos Mejorada -->
-        <section
-            class="py-10 bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900 min-h-screen"
-            id="galeria">
+        <section class="py-10 bg-gradient-to-b from-slate-50 to-white min-h-screen" id="galeria">
             <div class="container mx-auto px-4 md:px-6">
                 <!-- Encabezado mejorado (se mantiene igual) -->
                 <div class="text-center mb-12 relative pt-8">
                     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl">
-                        <div class="h-40 w-40 bg-primary/5 dark:bg-purple-500/10 rounded-full blur-3xl mx-auto"></div>
+                        <div class="h-40 w-40 bg-primary/5 rounded-full blur-3xl mx-auto"></div>
                     </div>
 
                     <div class="relative">
-                        <h2
-                            class="text-5xl md:text-6xl font-bold text-primary dark:text-purple-300 mb-6 animate-item visible">
-                            Galería de <span class="text-brand-purple dark:text-purple-400">Momentos</span>
+                        <h2 class="text-5xl md:text-6xl font-bold text-primary mb-6 animate-item visible">
+                            Galería de <span class="text-brand-purple">Momentos</span>
                         </h2>
                         <div
                             class="w-40 h-1.5 bg-gradient-to-r from-primary to-brand-purple mx-auto mb-6 rounded-full shadow-lg animate-item visible delay-1">
                         </div>
 
                         <p
-                            class="text-lg md:text-xl text-slate-700 dark:text-slate-300 font-medium max-w-full md:whitespace-nowrap mx-auto mb-8 leading-relaxed animate-item visible delay-1">
+                            class="text-lg md:text-xl text-slate-700 font-medium max-w-full md:whitespace-nowrap mx-auto mb-8 leading-relaxed animate-item visible delay-1">
                             Capturando los mejores momentos de aprendizaje y diversión en nuestras actividades
                         </p>
 
@@ -311,17 +302,17 @@
                                 Todas
                             </button>
                             <button
-                                class="filter-btn px-5 py-2.5 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium rounded-full border border-slate-200 dark:border-slate-700 transition-all duration-300 hover:border-primary hover:dark:border-purple-500 animate-item visible delay-2"
+                                class="filter-btn px-5 py-2.5 bg-white text-slate-700 font-medium rounded-full border border-slate-200 transition-all duration-300 hover:border-primary animate-item visible delay-2"
                                 data-filter="ingles">
                                 Inglés
                             </button>
                             <button
-                                class="filter-btn px-5 py-2.5 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium rounded-full border border-slate-200 dark:border-slate-700 transition-all duration-300 hover:border-primary hover:dark:border-purple-500 animate-item visible delay-2"
+                                class="filter-btn px-5 py-2.5 bg-white text-slate-700 font-medium rounded-full border border-slate-200 transition-all duration-300 hover:border-primary animate-item visible delay-2"
                                 data-filter="karate">
                                 Karate
                             </button>
                             <button
-                                class="filter-btn px-5 py-2.5 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium rounded-full border border-slate-200 dark:border-slate-700 transition-all duration-300 hover:border-primary hover:dark:border-purple-500 animate-item visible delay-2"
+                                class="filter-btn px-5 py-2.5 bg-white text-slate-700 font-medium rounded-full border border-slate-200 transition-all duration-300 hover:border-primary animate-item visible delay-2"
                                 data-filter="ajedrez">
                                 Ajedrez
                             </button>
@@ -386,7 +377,7 @@
                     <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-1_fukr8w.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-1_fukr8w.jpg"
                                     alt="Clase de ajedrez - Niños aprendiendo estrategia" loading="lazy"
@@ -401,7 +392,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -412,7 +403,7 @@
                     <div class="masonry-item animate-item visible delay-2" data-category="ingles">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230398/Ingles-ninos-1_q5thf8.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230398/Ingles-ninos-1_q5thf8.jpg"
                                     alt="Clase de inglés - Aprendizaje interactivo" loading="lazy"
@@ -427,7 +418,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -438,7 +429,7 @@
                     <div class="masonry-item animate-item visible delay-3" data-category="karate">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-1_j9120d.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-1_j9120d.jpg"
                                     alt="Clase de karate - Entrenamiento disciplinado" loading="lazy"
@@ -453,7 +444,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -464,7 +455,7 @@
                     <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-2_xq1jqi.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-2_xq1jqi.jpg"
                                     alt="Clase de ajedrez - Concentración y táctica" loading="lazy"
@@ -479,7 +470,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -490,7 +481,7 @@
                     <div class="masonry-item animate-item visible delay-2" data-category="ingles">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Ingles-ninos-2_dph2id.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Ingles-ninos-2_dph2id.jpg"
                                     alt="Clase de inglés - Diversión y aprendizaje" loading="lazy"
@@ -505,7 +496,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -516,7 +507,7 @@
                     <div class="masonry-item animate-item visible delay-3" data-category="karate">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-2_asvcdg.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-2_asvcdg.jpg"
                                     alt="Clase de karate - Práctica de técnicas" loading="lazy"
@@ -531,7 +522,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -542,7 +533,7 @@
                     <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-3_pg9coa.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-3_pg9coa.jpg"
                                     alt="Clase de ajedrez - Desarrollo mental" loading="lazy"
@@ -557,7 +548,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -568,7 +559,7 @@
                     <div class="masonry-item animate-item visible delay-2" data-category="ingles">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Ingles-ninos-3_oigiti.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Ingles-ninos-3_oigiti.jpg"
                                     alt="Clase de inglés - Actividades dinámicas" loading="lazy"
@@ -583,7 +574,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -594,7 +585,7 @@
                     <div class="masonry-item animate-item visible delay-3" data-category="karate">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-3_li1vn4.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-3_li1vn4.jpg"
                                     alt="Clase de karate - Fortaleza y disciplina" loading="lazy"
@@ -609,7 +600,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -620,7 +611,7 @@
                     <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-4_zfn63s.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-4_zfn63s.jpg"
                                     alt="Clase de ajedrez - Pensamiento estratégico" loading="lazy"
@@ -635,7 +626,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -646,7 +637,7 @@
                     <div class="masonry-item animate-item visible delay-2" data-category="ingles">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Ingles-ninos-4_qo0o60.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Ingles-ninos-4_qo0o60.jpg"
                                     alt="Clase de inglés - Conversación práctica" loading="lazy"
@@ -661,7 +652,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -672,7 +663,7 @@
                     <div class="masonry-item animate-item visible delay-3" data-category="karate">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-4_hjzdee.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230394/Karate-ninos-4_hjzdee.jpg"
                                     alt="Clase de karate - Movimientos precisos" loading="lazy"
@@ -687,7 +678,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -698,7 +689,7 @@
                     <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-5_sh90kk.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-5_sh90kk.jpg"
                                     alt="Clase de ajedrez - Jugadas maestras" loading="lazy"
@@ -713,7 +704,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -724,7 +715,7 @@
                     <div class="masonry-item animate-item visible delay-2" data-category="ingles">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-5_sh90kk.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230399/Ajedrez-ninos-5_sh90kk.jpg"
                                     alt="Clase de inglés - Vocabulario nuevo" loading="lazy"
@@ -739,7 +730,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -750,7 +741,7 @@
                     <div class="masonry-item animate-item visible delay-3" data-category="karate">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Karate-ninos-5_ht8qm1.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Karate-ninos-5_ht8qm1.jpg"
                                     alt="Clase de karate - Defensa personal" loading="lazy"
@@ -765,7 +756,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -776,7 +767,7 @@
                     <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230391/Ajedrez-ninos-6_wwdhaq.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230391/Ajedrez-ninos-6_wwdhaq.jpg"
                                     alt="Clase de ajedrez - Análisis de partidas" loading="lazy"
@@ -791,7 +782,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -802,7 +793,7 @@
                     <div class="masonry-item animate-item visible delay-2" data-category="ingles">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ingles-ninos-6_h5520y.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ingles-ninos-6_h5520y.jpg"
                                     alt="Clase de inglés - Juegos educativos" loading="lazy"
@@ -817,7 +808,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -828,7 +819,7 @@
                     <div class="masonry-item animate-item visible delay-3" data-category="karate">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Karate-ninos-6_vap7kx.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Karate-ninos-6_vap7kx.jpg"
                                     alt="Clase de karate - Katas tradicionales" loading="lazy"
@@ -843,7 +834,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -854,7 +845,7 @@
                     <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230391/Ajedrez-ninos-7_lkqz7q.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230391/Ajedrez-ninos-7_lkqz7q.jpg"
                                     alt="Clase de ajedrez - Torneos escolares" loading="lazy"
@@ -869,7 +860,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -880,7 +871,7 @@
                     <div class="masonry-item animate-item visible delay-2" data-category="ingles">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ingles-ninos-7_njknza.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ingles-ninos-7_njknza.jpg"
                                     alt="Clase de inglés - Pronunciación perfecta" loading="lazy"
@@ -895,7 +886,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -906,7 +897,7 @@
                     <div class="masonry-item animate-item visible delay-3" data-category="karate">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Karate-ninos-7_nnv2pz.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Karate-ninos-7_nnv2pz.jpg"
                                     alt="Clase de karate - Respeto y honor" loading="lazy"
@@ -921,7 +912,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -932,7 +923,7 @@
                     <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230391/Ajedrez-ninos-8_dcb3ze.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230391/Ajedrez-ninos-8_dcb3ze.jpg"
                                     alt="Clase de ajedrez - Aperturas clásicas" loading="lazy"
@@ -947,7 +938,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -958,7 +949,7 @@
                     <div class="masonry-item animate-item visible delay-2" data-category="ingles">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230389/Ingles-ninos-8_fzhk0c.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230389/Ingles-ninos-8_fzhk0c.jpg"
                                     alt="Clase de inglés - Lectura comprensiva" loading="lazy"
@@ -973,7 +964,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -984,7 +975,7 @@
                     <div class="masonry-item animate-item visible delay-3" data-category="ajedrez">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-9_omxmak.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-9_omxmak.jpg"
                                     alt="Clase de ajedrez - Finales de partida" loading="lazy"
@@ -999,7 +990,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -1010,7 +1001,7 @@
                     <div class="masonry-item animate-item visible delay-1" data-category="ingles">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230389/Ingles-ninos-9_ttyqmh.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230389/Ingles-ninos-9_ttyqmh.jpg"
                                     alt="Clase de inglés - Expresión oral" loading="lazy"
@@ -1025,7 +1016,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -1036,7 +1027,7 @@
                     <div class="masonry-item animate-item visible delay-2" data-category="ajedrez">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-10_r5tnzo.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-10_r5tnzo.jpg"
                                     alt="Clase de ajedrez - Combinaciones tácticas" loading="lazy"
@@ -1051,7 +1042,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -1062,7 +1053,7 @@
                     <div class="masonry-item animate-item visible delay-3" data-category="ajedrez">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-11_evqfjb.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-11_evqfjb.jpg"
                                     alt="Clase de ajedrez - Práctica intensiva" loading="lazy"
@@ -1077,7 +1068,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -1088,7 +1079,7 @@
                     <div class="masonry-item animate-item visible delay-1" data-category="ajedrez">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-12_fcift7.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-12_fcift7.jpg"
                                     alt="Clase de ajedrez - Competencia amistosa" loading="lazy"
@@ -1103,7 +1094,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -1114,7 +1105,7 @@
                     <div class="masonry-item animate-item visible delay-2" data-category="ajedrez">
                         <button type="button"
                             data-img="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-13_vgfk3c.jpg"
-                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 dark:bg-slate-800/60 ring-1 ring-slate-900/10 dark:ring-slate-700/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
+                            class="group w-full text-left block overflow-hidden rounded-2xl bg-white/60 ring-1 ring-slate-900/10 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer">
                             <div class="relative">
                                 <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771230390/Ajedrez-ninos-13_vgfk3c.jpg"
                                     alt="Clase de ajedrez - Maestría y dedicación" loading="lazy"
@@ -1129,7 +1120,7 @@
                                 <div
                                     class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                                     <span
-                                        class="bg-white/90 dark:bg-slate-800/90 text-slate-900 dark:text-white px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
+                                        class="bg-white/90 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold shadow">Ver
                                         imagen</span>
                                 </div>
                             </div>
@@ -1254,9 +1245,7 @@
                 border-color: transparent !important;
             }
 
-            .dark .filter-btn.active {
-                background: linear-gradient(to right, #3b82f6, #a855f7) !important;
-            }
+
 
             /* Transiciones suaves para el filtrado */
             .masonry-item {
@@ -1563,11 +1552,11 @@
                     // Actualizar UI botones
                     filterBtns.forEach(b => {
                         b.classList.remove('active', 'bg-gradient-to-r', 'from-primary', 'to-brand-purple', 'text-white', 'shadow-lg');
-                        b.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-700');
+                        b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
                     });
 
                     this.classList.add('active', 'bg-gradient-to-r', 'from-primary', 'to-brand-purple', 'text-white', 'shadow-lg');
-                    this.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-700');
+                    this.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
 
                     currentCategory = this.getAttribute('data-filter');
                     filterItems();

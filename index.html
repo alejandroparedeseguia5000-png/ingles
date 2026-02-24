@@ -39,10 +39,14 @@
   <meta name="twitter:image:alt" content="EDUKARTE - Instituto infantil">
 
   <!-- ========== FAVICON ========== -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon"
+    href="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771448729/favicon_okiikr.ico">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771448729/favicon-32x32_mhwowr.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771448729/favicon-16x16_aapxjt.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://res.cloudinary.com/dlqvg6tut/image/upload/v1771448729/favicon-32x32_aapxjt.png">
 
   <!-- ========== PRECONNECT & DNS-PREFETCH (Rendimiento) ========== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -169,334 +173,7 @@
     <link href="./dist/output.css" rel="stylesheet">
   </noscript>
 
-  <!-- Critical CSS to prevent FOUC and CLS -->
-  <style>
-    /* Prevent FOUC (Flash of Unstyled Content) */
-    html {
-      visibility: hidden;
-      opacity: 0;
-    }
-
-    html.wf-active,
-    html.fonts-loaded {
-      visibility: visible;
-      opacity: 1;
-      transition: opacity 0.3s ease-in;
-    }
-
-    /* Fallback: show content after 100ms even if fonts don't load */
-    @keyframes fadeIn {
-      to {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-
-    html {
-      animation: fadeIn 0.001s ease-in 0.1s forwards;
-    }
-
-    /* Prevent layout shift while fonts load */
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    }
-
-    /* Reserve space for carousel images */
-    #carrusel-container img {
-      aspect-ratio: 560 / 420;
-    }
-  </style>
-
-  <style>
-    .carrusel-slide {
-      transition: opacity 1s ease-in-out;
-    }
-
-    #carrusel-container {
-      user-select: none;
-      /* Evitar selección de texto al arrastrar */
-    }
-
-    .carrusel-btn {
-      transition: all 0.3s ease;
-    }
-
-    .carrusel-btn.bg-white {
-      transform: scale(1.3);
-    }
-
-    /* ANIMACIONES DE SCROLL HACIA ARRIBA */
-    .section-animate {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    .section-animate.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Animaciones específicas para cada sección */
-    #nosotros .section-animate {
-      transition-delay: 0.1s;
-    }
-
-    #sobre-nosotros .section-animate {
-      transition-delay: 0.2s;
-    }
-
-    #galeria .section-animate {
-      transition-delay: 0.3s;
-    }
-
-    #cursos .section-animate {
-      transition-delay: 0.4s;
-    }
-
-    #testimonios .section-animate {
-      transition-delay: 0.5s;
-    }
-
-    #faq .section-animate {
-      transition-delay: 0.6s;
-    }
-
-    #ubicacion .section-animate {
-      transition-delay: 0.7s;
-    }
-
-    /* Animación para elementos dentro de las secciones */
-    .animate-item {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    .animate-item.delay-1 {
-      transition-delay: 0.1s;
-    }
-
-    .animate-item.delay-2 {
-      transition-delay: 0.2s;
-    }
-
-    .animate-item.delay-3 {
-      transition-delay: 0.3s;
-    }
-
-    .animate-item.delay-4 {
-      transition-delay: 0.4s;
-    }
-
-    .animate-item.delay-5 {
-      transition-delay: 0.5s;
-    }
-
-    .section-animate.visible .animate-item {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Efecto de brillo en iconos */
-    .group:hover .relative.w-16.h-16 {
-      animation: pulse-glow 1.5s infinite;
-    }
-
-    @keyframes pulse-glow {
-
-      0%,
-      100% {
-        box-shadow: 0 0 20px rgba(157, 18, 146, 0.3);
-      }
-
-      50% {
-        box-shadow: 0 0 40px rgba(157, 18, 146, 0.6);
-      }
-    }
-
-    /* Animación de entrada para tarjetas */
-    .group {
-      animation: fadeInUp 0.6s ease-out forwards;
-      opacity: 0;
-    }
-
-    .group:nth-child(1) {
-      animation-delay: 0.1s;
-    }
-
-    .group:nth-child(2) {
-      animation-delay: 0.2s;
-    }
-
-    .group:nth-child(3) {
-      animation-delay: 0.3s;
-    }
-
-    .group:nth-child(4) {
-      animation-delay: 0.4s;
-    }
-
-    .group:nth-child(5) {
-      animation-delay: 0.5s;
-    }
-
-    .group:nth-child(6) {
-      animation-delay: 0.6s;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
-  <style>
-    .check-icon {
-      font-size: 14px;
-    }
-
-    input[type="checkbox"]:checked+span>.check-icon {
-      display: block !important;
-    }
-
-    .curso-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 380px;
-    }
-
-    .curso-card:hover {
-      transform: translateY(-4px);
-      transition: all 0.3s ease;
-    }
-
-    .sticky {
-      position: sticky;
-    }
-
-    .btn-mas-info:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(236, 72, 153, 0.3);
-    }
-  </style>
-  <style>
-    .hero-gradient {
-      background: linear-gradient(90deg, #0f052e 0%, #1e1b4b 40%, transparent 100%);
-    }
-
-    .card-shadow {
-      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
-    }
-  </style>
-  <style>
-    /* Estilos específicos para mejorar legibilidad en móvil */
-    @media (max-width: 640px) {
-      .curso-card {
-        font-size: 15px;
-        /* Tamaño base más grande */
-      }
-
-      .curso-card h3 {
-        font-size: 1.125rem;
-        /* 18px en móvil */
-        line-height: 1.3;
-      }
-
-      .curso-card .material-symbols-outlined {
-        font-size: 18px;
-        /* Iconos más grandes */
-      }
-
-      .curso-card div[class*="text-slate"] {
-        font-size: 14px;
-        /* Texto de detalles */
-      }
-
-      .curso-card strong {
-        font-size: 15px;
-        /* Texto en negrita más grande */
-      }
-
-      .curso-card .bg-slate-100 {
-        padding: 16px;
-        /* Más padding para el botón */
-      }
-
-      .curso-card .btn-mas-info {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        font-size: 15px;
-      }
-    }
-
-    /* Para tablets */
-    @media (min-width: 641px) and (max-width: 1023px) {
-      .curso-card h3 {
-        font-size: 1.1rem;
-      }
-
-      .curso-card div[class*="text-slate"] {
-        font-size: 14px;
-      }
-    }
-  </style>
-  <style>
-    /* Ajustar altura del hero */
-    .min-h-screen {
-      min-height: calc(100vh - 80px);
-      /* Resta la altura del header */
-    }
-
-    /* Mejorar responsividad del texto */
-    @media (max-width: 768px) {
-      .min-h-screen {
-        min-height: calc(100vh - 64px);
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-      }
-    }
-  </style>
-  <style>
-    /* Ajuste específico para el hero */
-    .h-screen {
-      height: 100vh;
-      /* Altura exacta de la ventana */
-      margin-top: -5rem;
-      /* Compensa el espacio del header */
-      padding-top: 5rem;
-      /* Vuelve a agregar espacio para el contenido */
-    }
-
-    /* Mejorar responsividad en móvil */
-    @media (max-width: 768px) {
-      .h-screen {
-        margin-top: -4rem;
-        padding-top: 4rem;
-      }
-    }
-
-    /* Reducir tamaño de números estadísticos en móviles pequeños */
-    @media (max-width: 440px) {
-
-      .text-4xl.font-bold.text-primary,
-      .text-4xl.font-bold.text-brand-purple {
-        font-size: 2rem !important;
-        /* Reducido de text-4xl (2.25rem) a 2rem */
-      }
-    }
-
-    /* Estrellas rellenadas */
-    .material-symbols-outlined.filled {
-      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 
   <!-- Script to mark when CSS is loaded -->
   <script>
@@ -574,10 +251,12 @@
         href="#faq">Preguntas</a>
     </nav>
 
-    <a class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-bold text-base shadow-lg transition-transform active:scale-95 mb-2"
-      href="https://wa.me/51933796733?text=Hola%20EDUKARTE%2C%20me%20interesan%20sus%20cursos" target="_blank"
-      rel="noopener noreferrer">
+    <a href="https://wa.me/51933796733?text=Hola%20EDUKARTE%2C%20me%20interesan%20sus%20cursos" target="_blank"
+      rel="noopener noreferrer" aria-label="Contactar con EDUKARTE por WhatsApp (se abre en nueva pestaña)"
+      class="bg-orange-700 hover:bg-orange-800 text-white px-8 py-3 rounded-full font-bold text-base shadow-lg transition-transform active:scale-95 mb-2">
+
       ¡CONTÁCTANOS!
+
     </a>
   </div>
   <main>
@@ -586,11 +265,10 @@
       <div class="absolute inset-0 z-0">
         <video autoplay muted loop playsinline preload="none" class="w-full h-full object-cover object-center"
           poster="https://res.cloudinary.com/dlqvg6tut/image/upload/f_webp,q_auto/VideoFondo_poster.jpg">
-          <!-- WebM ligero -->
+
+          <!-- Video -->
           <source src="https://res.cloudinary.com/dlqvg6tut/video/upload/f_webm,q_auto,ar_16:9/VideoFondo_q2epih.webm"
             type="video/webm">
-          <img src="https://res.cloudinary.com/dlqvg6tut/image/upload/f_webp,q_auto/VideoFondo_poster.jpg"
-            alt="Estudiantes aprendiendo" class="w-full h-full object-cover object-center">
         </video>
 
 
@@ -623,15 +301,20 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-5 items-center justify-center lg:justify-start">
+
               <a href="https://wa.me/51933796733?text=Hola%20EDUKARTE%2C%20me%20interesan%20sus%20cursos"
                 target="_blank" rel="noopener noreferrer"
+                aria-label="Inscribirse en los cursos de Edukarte por WhatsApp (se abre en una nueva pestaña)"
                 class="bg-primary hover:bg-pink-700 text-white px-12 py-5 rounded-xl font-bold text-xl shadow-xl transition-all transform hover:-translate-y-1 active:scale-95 inline-block text-center">
+
                 Inscríbete hoy
+
               </a>
 
               <p class="text-slate-300 text-lg">
                 Clases para todas las edades
               </p>
+
             </div>
           </div>
 
@@ -690,10 +373,17 @@
 
               <!-- Indicadores -->
               <div class="absolute bottom-6 right-6 flex gap-3">
-                <button class="carrusel-btn w-3.5 h-3.5 rounded-full bg-white/50 hover:bg-white"></button>
-                <button class="carrusel-btn w-3.5 h-3.5 rounded-full bg-white/50 hover:bg-white"></button>
-                <button class="carrusel-btn w-3.5 h-3.5 rounded-full bg-white/50 hover:bg-white"></button>
-                <button class="carrusel-btn w-3.5 h-3.5 rounded-full bg-white/50 hover:bg-white"></button>
+                <button aria-label="Mostrar clases de inglés"
+                  class="carrusel-btn w-3.5 h-3.5 rounded-full bg-white/50 hover:bg-white"></button>
+
+                <button aria-label="Mostrar clases de karate"
+                  class="carrusel-btn w-3.5 h-3.5 rounded-full bg-white/50 hover:bg-white"></button>
+
+                <button aria-label="Mostrar clases de ajedrez"
+                  class="carrusel-btn w-3.5 h-3.5 rounded-full bg-white/50 hover:bg-white"></button>
+
+                <button aria-label="Mostrar clases de baile"
+                  class="carrusel-btn w-3.5 h-3.5 rounded-full bg-white/50 hover:bg-white"></button>
               </div>
             </div>
           </div>
@@ -1107,12 +797,24 @@
                   <span class="material-symbols-outlined text-green-500 mr-3 text-base">check_circle</span>
                   <span class="text-slate-800 font-medium">Inglés Jóvenes-Adultos (14+)</span>
                 </li>
+                <li class="flex items-center">
+                  <span class="material-symbols-outlined text-green-500 mr-3 text-base">check_circle</span>
+                  <span class="text-slate-800 font-medium">Inglés Intensivo (14+)</span>
+                </li>
               </ul>
 
               <div class="pt-5 border-t border-slate-200">
-                <p class="text-base text-slate-700 font-medium leading-relaxed">
+                <p class="text-base text-slate-700 font-medium leading-relaxed mb-4">
                   Desarrolla habilidades comunicativas y abre puertas internacionales.
                 </p>
+                <a href="https://wa.me/51933796733?text=Hola%20EDUKARTE%2C%20me%20interesa%20el%20curso%20de%20Ingl%C3%A9s"
+                  target="_blank" rel="noopener noreferrer"
+                  aria-label="Matricularse en el curso de Inglés por WhatsApp (se abre en una nueva pestaña)"
+                  class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-1">
+
+                  ¡Matricúlate aquí!
+
+                </a>
               </div>
             </div>
 
@@ -1179,9 +881,17 @@
               </ul>
 
               <div class="pt-5 border-t border-slate-200">
-                <p class="text-base text-slate-700 font-medium leading-relaxed">
+                <p class="text-base text-slate-700 font-medium leading-relaxed mb-4">
                   Fortalece cuerpo y mente con técnicas de artes marciales tradicionales.
                 </p>
+                <a href="https://wa.me/51933796733?text=Hola%20EDUKARTE%2C%20me%20interesa%20el%20curso%20de%20Karate"
+                  target="_blank" rel="noopener noreferrer"
+                  aria-label="Matricularse en el curso de Karate por WhatsApp (se abre en una nueva pestaña)"
+                  class="block w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-1">
+
+                  ¡Matricúlate aquí!
+
+                </a>
               </div>
             </div>
 
@@ -1247,9 +957,17 @@
               </ul>
 
               <div class="pt-5 border-t border-slate-200">
-                <p class="text-base text-slate-700 font-medium leading-relaxed">
+                <p class="text-base text-slate-700 font-medium leading-relaxed mb-4">
                   Ejercita tu mente con el juego ciencia que desarrolla habilidades cognitivas.
                 </p>
+                <a href="https://wa.me/51933796733?text=Hola%20EDUKARTE%2C%20me%20interesa%20el%20curso%20de%20Ajedrez"
+                  target="_blank" rel="noopener noreferrer"
+                  aria-label="Matricularse en el curso de Ajedrez por WhatsApp (se abre en una nueva pestaña)"
+                  class="block w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-1">
+
+                  ¡Matricúlate aquí!
+
+                </a>
               </div>
             </div>
 
@@ -1315,9 +1033,15 @@
               </ul>
 
               <div class="pt-5 border-t border-slate-200">
-                <p class="text-base text-slate-700 font-medium leading-relaxed">
+                <p class="text-base text-slate-700 font-medium leading-relaxed mb-4">
                   Libera tu energía y expresa emociones a través del movimiento y la música.
                 </p>
+                <a href="https://wa.me/51933796733?text=Hola%20EDUKARTE%2C%20me%20interesa%20el%20curso%20de%20Baile"
+                  target="_blank" rel="noopener noreferrer"
+                  aria-label="Matricularse en el curso de Baile por WhatsApp (se abre en una nueva pestaña)"
+                  class="block w-full text-center bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 rounded-xl transition-all shadow-md hover:shadow-lg hover:-translate-y-1">
+                  ¡Matricúlate aquí!
+                </a>
               </div>
             </div>
 
@@ -1801,33 +1525,60 @@
           </div>
 
           <!-- Navigation Arrows -->
-          <button id="testimonial-prev"
-            class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-6 bg-white hover:bg-primary:bg-primary text-slate-800 hover:text-white rounded-full p-3 md:p-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 border-2 border-slate-200 z-50 group">
-            <span class="material-symbols-outlined text-2xl md:text-3xl">chevron_left</span>
+          <button id="testimonial-prev" type="button" aria-label="Ver testimonio anterior"
+            aria-controls="testimonials-carousel"
+            class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-6 bg-white text-slate-800 hover:text-white rounded-full p-3 md:p-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 border-2 border-slate-200 z-50 group">
+
+            <span class="material-symbols-outlined text-2xl md:text-3xl" aria-hidden="true">
+              chevron_left
+            </span>
+
           </button>
 
-          <button id="testimonial-next"
-            class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-6 bg-white hover:bg-primary:bg-primary text-slate-800 hover:text-white rounded-full p-3 md:p-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 border-2 border-slate-200 z-50 group">
-            <span class="material-symbols-outlined text-2xl md:text-3xl">chevron_right</span>
+          <button id="testimonial-next" type="button" aria-label="Ver siguiente testimonio"
+            aria-controls="testimonials-carousel"
+            class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-6 bg-white text-slate-800 hover:text-white rounded-full p-3 md:p-4 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 border-2 border-slate-200 z-50 group">
+
+            <span class="material-symbols-outlined text-2xl md:text-3xl" aria-hidden="true">
+              chevron_right
+            </span>
+
           </button>
+
 
           <!-- Dot Indicators -->
           <div class="flex justify-center gap-3 mt-8 md:mt-12">
-            <button
+
+            <button type="button"
               class="testimonial-dot w-3 h-3 md:w-4 md:h-4 rounded-full bg-primary transition-all duration-300 animate-item delay-4"
-              data-index="0"></button>
-            <button
+              data-index="0" aria-label="Mostrar testimonio 1" aria-controls="testimonials-carousel"
+              aria-current="true">
+            </button>
+
+            <button type="button"
               class="testimonial-dot w-3 h-3 md:w-4 md:h-4 rounded-full bg-slate-300 hover:bg-primary/50 transition-all duration-300 animate-item delay-4"
-              data-index="1"></button>
-            <button
+              data-index="1" aria-label="Mostrar testimonio 2" aria-controls="testimonials-carousel"
+              aria-current="false">
+            </button>
+
+            <button type="button"
               class="testimonial-dot w-3 h-3 md:w-4 md:h-4 rounded-full bg-slate-300 hover:bg-primary/50 transition-all duration-300 animate-item delay-4"
-              data-index="2"></button>
-            <button
+              data-index="2" aria-label="Mostrar testimonio 3" aria-controls="testimonials-carousel"
+              aria-current="false">
+            </button>
+
+            <button type="button"
               class="testimonial-dot w-3 h-3 md:w-4 md:h-4 rounded-full bg-slate-300 hover:bg-primary/50 transition-all duration-300 animate-item delay-4"
-              data-index="3"></button>
-            <button
+              data-index="3" aria-label="Mostrar testimonio 4" aria-controls="testimonials-carousel"
+              aria-current="false">
+            </button>
+
+            <button type="button"
               class="testimonial-dot w-3 h-3 md:w-4 md:h-4 rounded-full bg-slate-300 hover:bg-primary/50 transition-all duration-300 animate-item delay-4"
-              data-index="4"></button>
+              data-index="4" aria-label="Mostrar testimonio 5" aria-controls="testimonials-carousel"
+              aria-current="false">
+            </button>
+
           </div>
         </div>
       </div>
@@ -2405,10 +2156,13 @@
               <h3 class="text-2xl font-bold mb-4">¿Tienes otra pregunta?</h3>
               <p class="mb-6 text-white/90">Contáctanos directamente por WhatsApp para una respuesta inmediata</p>
               <a href="https://wa.me/51933796733?text=Hola%20EDUKARTE%2C%20me%20interesan%20sus%20cursos"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer" aria-label="Preguntar por WhatsApp a EDUKARTE"
                 class="inline-flex items-center bg-white text-primary hover:bg-slate-100 font-bold py-3 px-8 rounded-full text-lg transition-all hover:scale-105">
-                <span class="material-symbols-outlined mr-2">chat</span>
-                Preguntar por WhatsApp
+
+                <span class="material-symbols-outlined mr-2" aria-hidden="true">chat</span>
+
+                <span>Preguntar por WhatsApp</span>
+
               </a>
             </div>
           </div>
@@ -2444,29 +2198,38 @@
 
             <!-- Map Slide 1: Lurín -->
             <div class="map-slide absolute inset-0 transition-opacity duration-500 opacity-100 z-10" id="map-1">
+
               <iframe
                 src="https://www.google.com/maps/embed?pb=!4v1770694518490!6m8!1m7!1s-Y57DmVn7luT411tlFCpow!2m2!1d-12.27386813520425!2d-76.87231825452098!3f107.61731435409564!4f5.91010650633514!5f0.7820865974627469"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade" class="w-full h-full">
+                title="Mapa de la sede Lurín" width="100%" height="100%" style="border:0;" allowfullscreen
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full">
               </iframe>
+
               <div
                 class="absolute top-4 left-4 bg-white/90 text-slate-800 py-2 px-4 rounded-full text-xs md:text-sm font-bold shadow-md z-20 pointer-events-none flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-base">location_on</span> Sede Lurín
+                <span class="material-symbols-outlined text-primary text-base">location_on</span>
+                Sede Lurín
               </div>
+
             </div>
 
-            <!-- Map Slide 2: Street View / VES -->
+
+            <!-- Map Slide 2: Villa El Salvador -->
             <div class="map-slide absolute inset-0 transition-opacity duration-500 opacity-0 z-0 pointer-events-none"
               id="map-2">
+
               <iframe
                 src="https://www.google.com/maps/embed?pb=!4v1770694316608!6m8!1m7!1sgy1Osv0hPup7JnU0uN5y3Q!2m2!1d-12.21243727994366!2d-76.93482255904881!3f129.64!4f10.939999999999998!5f0.7820865974627469"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade" class="w-full h-full">
+                title="Mapa de la sede Villa El Salvador" width="100%" height="100%" style="border:0;" allowfullscreen
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full">
               </iframe>
+
               <div
                 class="absolute top-4 left-4 bg-white/90 text-slate-800 py-2 px-4 rounded-full text-xs md:text-sm font-bold shadow-md z-20 pointer-events-none flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-base">streetview</span> Sede Villa El Salvador
+                <span class="material-symbols-outlined text-primary text-base">streetview</span>
+                Sede Villa El Salvador
               </div>
+
             </div>
 
             <!-- Navigation Controls -->
@@ -2556,12 +2319,15 @@
                   <h3 class="text-lg font-bold text-brand-purple mb-1">Teléfonos</h3>
                   <div class="text-sm text-slate-700 leading-relaxed space-y-1">
                     <p>
-                      <a href="tel:+51933796733" class="hover:text-primary transition-colors font-medium">
+                      <a href="tel:+51933796733" aria-label="Llamar al número 933 796 733"
+                        class="hover:text-primary transition-colors font-medium">
                         +51 933 796 733
                       </a>
                     </p>
+
                     <p>
-                      <a href="tel:+51927622984" class="hover:text-primary transition-colors font-medium">
+                      <a href="tel:+51927622984" aria-label="Llamar al número 927 622 984"
+                        class="hover:text-primary transition-colors font-medium">
                         +51 927 622 984
                       </a>
                     </p>
@@ -2586,7 +2352,9 @@
                 <div class="flex-1">
                   <h3 class="text-lg font-bold text-primary mb-1">Email</h3>
                   <p class="text-sm text-slate-700 leading-relaxed">
-                    <a href="mailto:info.englishworldwide@gmail.com" class="hover:text-primary transition-colors">
+                    <a href="mailto:info.englishworldwide@gmail.com"
+                      aria-label="Enviar correo a info.englishworldwide@gmail.com"
+                      class="hover:text-primary transition-colors">
                       info.englishworldwide@gmail.com
                     </a>
                   </p>
@@ -2638,7 +2406,8 @@
               profesionales.
             </p>
             <a href="https://wa.me/51933796733?text=Hola%20EDUKARTE%2C%20me%20interesan%20sus%20cursos" target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" aria-label="Inscribirse en los cursos de EDUKARTE vía WhatsApp"
+              title="Inscribirse en los cursos de EDUKARTE vía WhatsApp"
               class="bg-primary hover:bg-white hover:text-primary transition-all px-12 py-4 rounded-xl font-bold text-xl shadow-xl hover:-translate-y-1 inline-block">
               ¡QUIERO INSCRIBIRME!
             </a>
@@ -2661,13 +2430,14 @@
   <!-- Botón de WhatsApp Flotante -->
   <div class="fixed bottom-6 right-6 z-50">
     <a href="https://wa.me/51933796733?text=Hola%20EDUKARTE%2C%20me%20interesan%20sus%20cursos" target="_blank"
-      rel="noopener noreferrer"
-      class="w-14 h-14 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110 active:scale-95 animate-bounce"
-      aria-label="Contactar por WhatsApp">
-      <!-- Icono oficial de WhatsApp -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7 fill-current">
+      rel="noopener noreferrer" aria-label="Contactar a EDUKARTE por WhatsApp" title="Contactar por WhatsApp"
+      class="w-14 h-14 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110 active:scale-95">
+
+      <!-- Ícono oficial WhatsApp -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-7 h-7 fill-current" aria-hidden="true">
+
         <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.511-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411" />
+          d="M20.52 3.48A11.8 11.8 0 0012.06 0C5.5 0 .2 5.3.2 11.86c0 2.1.55 4.16 1.6 5.97L0 24l6.36-1.66a11.8 11.8 0 005.7 1.45h.01c6.56 0 11.86-5.3 11.86-11.86 0-3.17-1.23-6.15-3.41-8.33zM12.07 21.5h-.01a9.6 9.6 0 01-4.88-1.34l-.35-.2-3.77.98 1-3.67-.23-.38a9.6 9.6 0 01-1.47-5.12c0-5.33 4.34-9.67 9.68-9.67 2.58 0 5 1 6.83 2.83a9.58 9.58 0 012.83 6.84c0 5.33-4.34 9.67-9.67 9.67zm5.3-7.23c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.74.94-.91 1.13-.17.19-.34.22-.63.07-.29-.14-1.22-.45-2.33-1.43-.86-.76-1.44-1.7-1.61-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.64-1.54-.88-2.11-.23-.56-.47-.48-.64-.49l-.55-.01c-.19 0-.51.07-.78.36-.26.29-1.02 1-.99 2.44.02 1.44 1.04 2.83 1.19 3.03.14.19 2.05 3.13 5.01 4.27.7.3 1.25.48 1.68.61.71.23 1.36.2 1.87.12.57-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33z" />
       </svg>
     </a>
   </div>
@@ -2693,33 +2463,51 @@
               </h3>
             </div>
           </div>
-          <p class="text-gray-400 leading-relaxed text-sm">
+          <p class="text-gray-300 leading-relaxed text-sm">
             Empoderando estudiantes a través de una educación de calidad. Aprende, crece y alcanza tus metas con
-            nuestros
-            programas especializados.
+            nuestros programas especializados.
           </p>
           <div class="flex gap-4">
-            <a href="https://www.facebook.com/englishworldwidelurin" target="_blank"
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/englishworldwidelurin" target="_blank" rel="noopener noreferrer"
+              aria-label="Visitar Facebook de EDUKARTE (se abre en nueva pestaña)" title="Facebook"
               class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 group">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path
-                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12..." />
               </svg>
+
+              <span class="sr-only">Facebook EDUKARTE</span>
             </a>
+
+
+            <!-- TikTok -->
             <a href="https://www.tiktok.com/@english_worldwide?is_from_webapp=1&sender_device=pc" target="_blank"
+              rel="noopener noreferrer" aria-label="Visitar TikTok de EDUKARTE (se abre en nueva pestaña)"
+              title="TikTok"
               class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all duration-300 group">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path
-                  d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z" />
+
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M19.589 6.686a4.793 4.793..." />
               </svg>
+
+              <span class="sr-only">TikTok EDUKARTE</span>
             </a>
-            <a href="https://wa.me/51933796733" target="_blank"
+
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/51933796733" target="_blank" rel="noopener noreferrer"
+              aria-label="Contactar a EDUKARTE por WhatsApp (se abre en nueva pestaña)" title="WhatsApp"
               class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-green-500 hover:text-white transition-all duration-300 group">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.76.982.998-3.675-.236-.374a9.86 9.86 0 01-1.511-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.9 6.994c-.004 5.45-4.438 9.88-9.888 9.88m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.333.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.333 11.893-11.893 0-3.18-1.24-6.162-3.495-8.411" />
+
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M17.472 14.382c-.297-.149..." />
               </svg>
+
+              <span class="sr-only">WhatsApp EDUKARTE</span>
             </a>
+
           </div>
         </div>
 
@@ -2729,111 +2517,174 @@
             Enlaces Rápidos
             <span class="absolute -bottom-2 left-0 w-12 h-1 bg-primary rounded-full"></span>
           </h4>
-          <ul class="space-y-3 text-gray-400 text-sm">
-            <li>
-              <a href="#" class="hover:text-primary transition-colors flex items-center gap-2 group">
-                <span class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>Inicio
-              </a>
-            </li>
-            <li>
-              <a href="#cursos" class="hover:text-primary transition-colors flex items-center gap-2 group">
-                <span class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>Nuestros Cursos
-              </a>
-            </li>
-            <li>
-              <a href="#nosotros" class="hover:text-primary transition-colors flex items-center gap-2 group">
-                <span class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>Sobre Nosotros
-              </a>
-            </li>
-            <li>
-              <a href="galeria.html" class="hover:text-primary transition-colors flex items-center gap-2 group">
-                <span class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>Galería
-              </a>
-            </li>
-            <li>
-              <a href="#testimonios" class="hover:text-primary transition-colors flex items-center gap-2 group">
-                <span class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>Testimonios
-              </a>
-            </li>
-          </ul>
+
+          <nav aria-label="Enlaces rápidos del sitio">
+            <ul class="space-y-3 text-gray-400 text-sm">
+
+              <li>
+                <a href="/" aria-label="Ir a la página de inicio" aria-current="page"
+                  class="hover:text-primary transition-colors flex items-center gap-2 group">
+                  <span class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>
+                  Inicio
+                </a>
+              </li>
+
+              <li>
+                <a href="#cursos" aria-label="Ver nuestros cursos disponibles"
+                  class="hover:text-primary transition-colors flex items-center gap-2 group">
+                  <span class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>
+                  Nuestros Cursos
+                </a>
+              </li>
+
+              <li>
+                <a href="#nosotros" aria-label="Conocer más sobre EDUKARTE"
+                  class="hover:text-primary transition-colors flex items-center gap-2 group">
+                  <span class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>
+                  Sobre Nosotros
+                </a>
+              </li>
+
+              <li>
+                <a href="galeria.html" aria-label="Ver galería de fotos de EDUKARTE"
+                  class="hover:text-primary transition-colors flex items-center gap-2 group">
+                  <span class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>
+                  Galería
+                </a>
+              </li>
+
+              <li>
+                <a href="#testimonios" aria-label="Leer testimonios de estudiantes"
+                  class="hover:text-primary transition-colors flex items-center gap-2 group">
+                  <span class="w-1 h-1 bg-primary rounded-full group-hover:w-2 transition-all"></span>
+                  Testimonios
+                </a>
+              </li>
+
+            </ul>
+          </nav>
         </div>
 
-        <!-- Columna 3: Cursos -->
+        <!-- Columna 3: Programas -->
         <div>
+
           <h4 class="text-lg font-bold text-white mb-6 relative inline-block">
             Programas
             <span class="absolute -bottom-2 left-0 w-12 h-1 bg-brand-purple rounded-full"></span>
           </h4>
-          <ul class="space-y-3 text-gray-400 text-sm">
-            <li>
-              <a href="#cursos" class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
-                <span class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>Inglés Kids
-              </a>
-            </li>
-            <li>
-              <a href="#cursos" class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
-                <span class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>Inglés
-                Juniors
-              </a>
-            </li>
-            <li>
-              <a href="#cursos" class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
-                <span class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>Inglés
-                Adultos
-              </a>
-            </li>
-            <li>
-              <a href="#cursos" class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
-                <span class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>Karate
-              </a>
-            </li>
-            <li>
-              <a href="#cursos" class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
-                <span class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>Ajedrez
-              </a>
-            </li>
-          </ul>
+
+          <nav aria-label="Programas educativos de EDUKARTE">
+            <ul class="space-y-3 text-gray-400 text-sm">
+
+              <li>
+                <a href="#cursos" aria-label="Ver información del programa Inglés Kids"
+                  class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
+                  <span aria-hidden="true"
+                    class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>
+                  Inglés Kids
+                </a>
+              </li>
+
+              <li>
+                <a href="#cursos" aria-label="Ver información del programa Inglés Juniors"
+                  class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
+                  <span aria-hidden="true"
+                    class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>
+                  Inglés Juniors
+                </a>
+              </li>
+
+              <li>
+                <a href="#cursos" aria-label="Ver información del programa Inglés para Adultos"
+                  class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
+                  <span aria-hidden="true"
+                    class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>
+                  Inglés Adultos
+                </a>
+              </li>
+
+              <li>
+                <a href="#cursos" aria-label="Ver información del programa Karate"
+                  class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
+                  <span aria-hidden="true"
+                    class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>
+                  Karate
+                </a>
+              </li>
+
+              <li>
+                <a href="#cursos" aria-label="Ver información del programa Ajedrez"
+                  class="hover:text-brand-purple transition-colors flex items-center gap-2 group">
+                  <span aria-hidden="true"
+                    class="w-1 h-1 bg-brand-purple rounded-full group-hover:w-2 transition-all"></span>
+                  Ajedrez
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+
         </div>
 
         <!-- Columna 4: Contacto -->
         <div>
+
           <h4 class="text-lg font-bold text-white mb-6 relative inline-block">
             Contacto
             <span class="absolute -bottom-2 left-0 w-12 h-1 bg-primary rounded-full"></span>
           </h4>
-          <ul class="space-y-4 text-gray-400 text-sm">
-            <li class="flex items-start gap-4 group">
-              <div
-                class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                <span class="material-symbols-outlined text-sm text-primary">location_on</span>
-              </div>
-              <span class="leading-tight">Av. Las Virreynas Mz A Lt 6, Lurín, Lima</span>
-            </li>
-            <li class="flex items-start gap-4 group">
-              <div
-                class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center shrink-0 group-hover:bg-green-500/20 transition-colors">
-                <span class="material-symbols-outlined text-sm text-green-500">phone</span>
-              </div>
-              <div>
-                <a href="tel:+51933796733" class="hover:text-white transition-colors block">+51 933 796 733</a>
-                <span class="text-xs text-gray-500">Lunes a Sábado</span>
-              </div>
-            </li>
-            <li class="flex items-start gap-4 group">
-              <div
-                class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center shrink-0 group-hover:bg-brand-purple/20 transition-colors">
-                <span class="material-symbols-outlined text-sm text-brand-purple">mail</span>
-              </div>
-              <a href="mailto:info.englishworldwide@gmail.com"
-                class="hover:text-white transition-colors break-all">info.englishworldwide@gmail.com</a>
-            </li>
-          </ul>
+
+          <address class="not-italic">
+            <ul class="space-y-4 text-gray-400 text-sm">
+
+              <!-- Dirección -->
+              <li class="flex items-start gap-4 group">
+                <div
+                  class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                  <span class="material-symbols-outlined text-sm text-primary" aria-hidden="true">location_on</span>
+                </div>
+                <span class="leading-tight">
+                  Av. Las Virreynas Mz A Lt 6, Lurín, Lima
+                </span>
+              </li>
+
+              <!-- Teléfono -->
+              <li class="flex items-start gap-4 group">
+                <div
+                  class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center shrink-0 group-hover:bg-green-500/20 transition-colors">
+                  <span class="material-symbols-outlined text-sm text-green-500" aria-hidden="true">phone</span>
+                </div>
+                <div>
+                  <a href="tel:+51933796733" aria-label="Llamar al número 933 796 733"
+                    class="hover:text-white transition-colors block">
+                    +51 933 796 733
+                  </a>
+                  <span class="text-xs text-gray-400">Lunes a Sábado</span>
+                </div>
+              </li>
+
+              <!-- Email -->
+              <li class="flex items-start gap-4 group">
+                <div
+                  class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center shrink-0 group-hover:bg-brand-purple/20 transition-colors">
+                  <span class="material-symbols-outlined text-sm text-brand-purple" aria-hidden="true">mail</span>
+                </div>
+                <a href="mailto:info.englishworldwide@gmail.com"
+                  aria-label="Enviar correo a info.englishworldwide@gmail.com"
+                  class="hover:text-white transition-colors break-all">
+                  info.englishworldwide@gmail.com
+                </a>
+              </li>
+
+            </ul>
+          </address>
+
         </div>
       </div>
 
       <!-- Barra Inferior -->
       <div class="border-t border-gray-800 pt-8 mt-4 flex justify-center items-center">
-        <p class="text-gray-500 text-sm text-center">
+        <p class="text-gray-300 text-sm text-center">
           © <span id="year">2026</span> English WorldWide. Todos los derechos reservados.
         </p>
       </div>
